@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td><label for="fname">First name</label></td>
+                <td><input type="text" id="fname"><br><br></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last name</label></td>
+                <td><input type="text" id="lname"><br><br></td>
+            </tr>
+            <tr>
+                <td><label for="idnumber">Id Number</label></td>
+                <td><input type="number" id="idnumber"><br><br></td>
+            </tr>
+            <tr>
+                <td><label for="phnumber">Phone Number</label></td>
+                <td><input type="number" id="phnumber"><br><br></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email Address</label></td>
+                <td><input type="email" id="email"><br><br></td>
+            </tr>
+            <tr>
+                <td><label for="county">County:</label></td>
+                <td>
+                    <select name="county" id="county">
+                        <option value="nairobi">Nairobi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="muranga">Muranga</option>
+                        <option value="kisumu">Kisumu</option>
+                        <option value="kajiado">Kajiado</option>
+                        <option value="kiambu">Kiambu</option>
+                        <option value="eldoret">Eldoret</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="town">Town:</label></td>
+                <td>
+                    <select name="town" id="town" required>
+                        <option value="nairobi">Nairobi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="muranga">Muranga</option>
+                        <option value="kisumu">Kisumu</option>
+                        <option value="kajiado">Kajiado</option>
+                        <option value="kiambu">Kiambu</option>
+                        <option value="eldoret">Eldoret</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="location">Location:</label></td>
+                <td><input type="text" id="location"></td>
+            </tr>
+        </table>
+        <input type="checkbox" id="robot" name="robot" value="robot">
+        <label for="robot">I am not a robot</label><br>
+        <input type="submit" value="Sign up"><br>
+        <label>Already have an account? <a href="login.html">Log in</a></label>
+    </form>
+</body>
+
+</html>
