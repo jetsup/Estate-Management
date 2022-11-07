@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login Page</title>
+    <script src="loginsValidation.js"></script>
 </head>
 
 <body>
-    <form action="login.php" method="post">
+    <form name="loginForm" onsubmit="return validateLogins()" action="login.php" method="post">
         <input type="text" placeholder="Username" name="username" autocomplete="username"><br><br>
         <input type="password" placeholder="Password" name="password" autocomplete="current-password"><br><br>
-        <input type="submit" value="log in"><br><br>
-        <label>Don't have an account? <a href="sign up.html">Sign up</a></label>
+        <input type="submit" value="Log in"><br><br>
+        <label>Don't have an account? <a href="sign up.php">Sign up</a></label>
     </form>
 </body>
 

@@ -1,7 +1,7 @@
 -- this script will populate essential data to the database
 USE estate;
-DESC county;
-INSERT IGNORE INTO county VALUES
+-- DESC counties;
+INSERT IGNORE INTO counties VALUES
 	(1, 'MOMBASA'),
 	(2, 'KWALE'),
 	(3, 'KILIFI'),
@@ -50,111 +50,106 @@ INSERT IGNORE INTO county VALUES
 	(46, 'NYAMIRA'),
 	(47, 'NAIROBI');
 -- auto generated file the counties won't match
-INSERT IGNORE INTO town VALUES
-	(1, 'Bungoma', 12),
-	(2, 'Busia', 38),
-	(3, 'Butere', 12),
-	(4, 'Dadaab', 41),
-	(5, 'Diani Beach', 17),
-	(6, 'Eldoret', 10),
-	(7, 'Emali', 44),
-	(8, 'Embu', 22),
-	(9, 'Garissa', 35),
-	(10, 'Gede', 34),
-	(11, 'Hola', 43),
-	(12, 'Homa Bay', 33),
-	(13, 'Isiolo', 12),
-	(14, 'Kitui', 34),
-	(15, 'Kibwezi', 31),
-	(16, 'Kajiado', 13),
-	(17, 'Kakamega', 19),
-	(18, 'Kakuma', 2),
-	(19, 'Kapenguria', 44),
-	(20, 'Kericho', 17),
-	(21, 'Keroka', 12),
-	(22, 'Kiambu', 26),
-	(23, 'Kilifi', 16),
-	(24, 'Kisii', 45),
-	(25, 'Kisumu', 47),
-	(26, 'Kitale', 45),
-	(27, 'Lamu', 15),
-	(28, 'Langata', 35),
-	(29, 'Litein', 16),
-	(30, 'Lodwar', 11),
-	(31, 'Lokichoggio', 25),
-	(32, 'Londiani', 30),
-	(33, 'Loyangalani', 12),
-	(34, 'Machakos', 46),
-	(35, 'Makindu', 42),
-	(36, 'Malindi', 2),
-	(37, 'Mandera', 8),
-	(38, 'Maralal', 26),
-	(39, 'Marsabit', 31),
-	(40, 'Meru', 11),
-	(41, 'Mombasa', 37),
-	(42, 'Moyale', 18),
-	(43, 'Mumias', 28),
-	(44, 'Muranga', 41),
-	(45, 'Mutomo', 17),
-	(46, 'Nairobi', 40),
-	(47, 'Naivasha', 7),
-	(48, 'Nakuru', 22),
-	(49, 'Namanga', 46),
-	(50, 'Nanyuki', 14),
-	(51, 'Naro Moru', 19),
-	(52, 'Narok', 41),
-	(53, 'Nyahururu', 16),
-	(54, 'Nyeri', 10),
-	(55, 'Ruiru', 10),
-	(56, 'Shimoni', 17),
-	(57, 'Takaungu', 17),
-	(58, 'Thika', 34),
-	(59, 'Vihiga', 32),
-	(60, 'Voi', 14),
-	(61, 'Wajir', 25),
-	(62, 'Watamu', 45),
-	(63, 'Webuye', 8),
-	(64, 'Wote', 10),
-	(65, 'Wundanyi', 30);
--- 
+INSERT IGNORE INTO towns VALUES
+	(1, 'CHANGAMWE', 1), (2, 'JOMVU', 1), (3, 'KISAUNI', 1), (4, 'NYALI', 1), (5, 'LIKONI', 1), (6, 'MVITA', 1),
+	(7, 'MSAMBWENI', 2), (8, 'LUNGA LUNGA', 2), (9, 'MATUGA', 2), (10, 'KINANGO', 2),
+	(11, 'KILIFI NORTH', 3), (12, 'KILIFI SOUTH', 3), (13, 'KALOLENI', 3), (14, 'RABAI', 3), (15, 'GANZE', 3), (16, 'MALINDI', 3), (17, 'MAGARINI', 3),
+	(18, 'GARSEN', 4), (19, 'GALOLE', 4), (20, 'BURA', 4),
+	(21, '''LAMU EAST', 5), (22, 'LAMU WEST', 5),
+	(23, 'TAVETA', 6), (24, 'WUNDANYI', 6), (25, 'MWATATE', 6), (26, 'VOI', 6),
+	(27, 'GARISSA TOWNSHIP', 7), (28, 'BALAMBALA', 7), (29, 'LAGDERA', 7), (30, 'DABAAB', 7), (31, 'FAFI', 7), (32, 'IJARA', 7),
+	(33, 'WAJIR NORTH', 8), (34, 'WAJIR EAST', 8), (35, 'TARBAJ', 8), (36, 'WAJIR WEST', 8), (37, 'ELDAS', 8), (38, 'WAJIR SOUTH', 8),
+	(39, 'MANDERA WEST', 9), (40, 'BANISSA', 9), (41, 'MANDERA NORTH', 9), (42, 'MANDERA SOUTH', 9), (43, 'MANDERA EAST', 9), (44, 'LAFEY', 9),
+	(45, 'MOYALE', 10), (46, 'NORTH HORR', 10), (47, 'SAKU', 10), (48, 'LAISAMIS', 10),
+	(49, 'ISIOLO NORTH', 11), (50, 'ISIOLO SOUTH', 11),
+	(51, 'IGEMBE SOUTH', 12), (52, 'IGEMBE CENTRAL', 12), (53, 'IGEMBE NORTH', 12), (54, 'TIGANIA WEST', 12), (55, 'TIGANIA EAST', 12), (56, 'NORTH IMENTI', 12), (57, 'BUURI', 12), (58, 'CENTRAL IMENTI', 12), (59, 'SOUTH IMENTI', 12),
+	(60, 'MAARA', 13), (61, 'CHUKA', 13), (62, 'THARAKA', 13),
+	(63, 'MANYATTA', 14), (64, 'RUNYENJES', 14), (65, 'MBEERE SOUTH', 14), (66, 'MBEERE NORTH', 14),
+	(67, 'MWINGI NORTH', 15), (68, 'MWINGI WEST', 15), (69, 'MWINGI CENTRAL', 15), (70, 'KITUI WEST', 15), (71, 'KITUI RURAL', 15), (72, 'KITUI CENTRAL', 15), (73, 'KITUI EAST', 15), (74, 'KITUI SOUTH', 15),
+	(75, 'MASINGA', 16), (76, 'YATTA', 16), (77, 'KANGUNDO', 16),(78, 'MATUNGULU', 16), (79, 'KATHIANI', 16), (80, 'MAVOKO', 16), (81, 'MACHAKOS TOWN', 16), (82, 'MWALA', 16),
+	(83, 'MBOONI', 17), (84, 'KILOME', 17), (85, 'KAITI', 17), (86, 'MAKUENI', 17), (87, 'KIBWEZI WEST', 17), (88, 'KIBWEZI EAST', 17),
+	(89, 'KINANGOP', 18), (90, 'KIPIPIRI', 18), (91, 'OL KALOU', 18), (92, 'OL JOROK', 18), (93, 'NDARAGWA', 18),
+	(94, 'TETU', 19), (95, 'KIENI', 19), (96, 'MATHIRA', 19), (97, 'OTHAYA', 19), (98, 'MUKURWENI', 19), (99, 'NYERI TOWN', 19),
+	(100, 'MWEA', 20), (101, 'GICHUGU', 20), (102, 'NDIA', 20), (103, 'KIRINYAGA CENTRAL', 20),
+	(104, 'KANGEMA', 21), (105, 'MATHIOYA', 21), (106, 'KIHARU', 21), (107, 'KIGUMO', 21), (108, 'MARAGWA', 21), (109, 'KANDARA', 21), (110, 'GATANGA', 21),
+	(111, 'GATUNDU SOUTH', 22), (112, 'GATUNDU NORTH', 22), (113, 'JUJA', 22), (114, 'THIKA TOWN', 22), (115, 'RUIRU', 22), (116, 'GITHUNGURI', 22), (117, 'KIAMBU', 22), (118, 'KIAMBAA', 22), (119, 'KABETE', 22), (120, 'KIKUYU', 22), (121, 'LIMURU', 22), (122, 'LARI', 22),
+	(123, 'TURKANA NORTH', 23), (124, 'TURKANA WEST', 23), (125, 'TURKANA CENTRAL', 23), (126, 'LOIMA', 23), (127, 'TURKANA SOUTH', 23), (128, 'TURKANA EAST', 23),
+	(129, 'KAPENGURIA', 24), (130, 'SIGOR', 24), (131, 'KACHELIBA', 24), (132, 'POKOT SOUTH', 24),
+	(133, 'SAMBURU WEST', 25), (134, 'SAMBURU NORTH', 25), (135, 'SAMBURU EAST', 25),
+	(136, 'KWANZA', 26), (137, 'ENDEBESS', 26), (138, 'SABOTI', 26), (139, 'KIMININI', 26), (140, 'CHERANGANY', 26),
+	(141, 'SOY', 27), (142, 'TURBO', 27), (143, 'MOIBEN', 27), (144, 'AINABKOI', 27), (145, 'KAPSERET', 27), (146, 'KESSES', 27),
+	(147, 'MARAKWET EAST', 28), (148,'MARAKWET WEST', 28), (149, 'KEIYO NORTH', 28), (150, 'KEIYO SOUTH', 28),
+	(151, 'TINDERET', 29), (152, 'ALDAI', 29), (153, 'NANDI HILL', 29), (154, 'CHESUMEI', 29), (155, 'EMGWEN', 29), (156, 'MOSOP', 29),
+	(157, 'TIATY', 30), (158, 'BARINGO NORTH', 30), (159, 'BARINGO CENTRAL', 30), (160, 'BARINGO SOUTH', 30), (161, 'MOGOTIO', 30), (162, 'ELDAMA RAVINE', 30),
+	(163, 'LAIKIPIA WEST', 31), (164, 'LAIKIPIA EAST', 31), (165, 'LAIKIPIA NORTH', 31),
+	(166, 'MOLO', 32), (167, 'NJORO', 32), (168, 'NAIVASHA', 32), (169, 'GILGIL', 32), (170, 'KURESOI SOUTH', 32), (171, 'KURESOI NORTH', 32), (172, 'SUBUKIA', 32), (173, 'RONGAI', 32), (174, 'BAHATI', 32), (175, 'NAKURU TOWN WEST', 32), (176, 'NAKURU TOWN EAST', 32),
+	(177, 'KILGORIS', 33), (178, 'EMURUA DIKIRR', 33), (179, 'NAROK NORTH', 33), (180, 'NAROK EAST', 33), (181, 'NAROK SOUTH', 33), (182, 'NAROK WEST', 33),
+	(183, 'KAJIADO NORTH', 34), (184, 'KAJIADO CENTRAL', 34), (185, 'KAJIADO EAST', 34), (186, 'KAJIADO WEST', 34), (187, 'KAJIADO SOUTH', 34),
+	(188, 'KIPKELION EAST', 35), (189, 'KIPKELION WEST', 35), (190, 'AINAMOI', 35), (191, 'BURETI', 35), (192, 'BELGUT', 35), (193, 'SIGOWET-SION', 35),
+	(194, 'SOTIK', 36), (195, 'CHEPALUNGU', 36), (196, 'BOMET EAST', 36), (197, 'BOMET CENTRAL', 36), (198, 'KONI', 36),
+	(199, 'LUGARI', 37), (200, 'LIKUYANI', 37), (201, 'MALAVA', 37), (202, 'LURAMBI', 37), (203, 'NAVAKHOLO', 37), (204, 'MUMIAS WEST', 37), (205, 'MUMIAS EAST', 37), (206, 'MATUNGU', 37), (207, 'BUTERE', 37), (208, 'KWISERO', 37), (209, 'SHINYALU', 37), (210, 'IKOLOMANI', 37),
+	(211, 'VIHIGA', 38), (212, 'SABATIA', 38), (213, 'HAMISI', 38), (214, 'LUANDA', 38), (215, 'EMUHAYA', 38),
+	(216, 'MOUNT ELGON', 39), (217, 'SIRISIA', 39), (218, 'KABUCHAI', 39), (219, 'BUMULA', 39), (220, 'KANDUYI', 39), (221, 'WEBUYE EAST', 39), (222, 'WEBUYE WEST', 39), (223, 'KIMILILI', 39), (224, 'TONGAREN', 39),
+	(225, 'TESO NORTH', 40), (226, 'TESO SOUTH', 40), (227, 'NAMBALE', 40), (228, 'MATAYOS', 40), (229, 'BUTULA', 40), (230, 'FUNYULA', 40), (231, 'BUDALANGI', 40),
+	(232, 'UGENYA', 41), (233, 'UGUNJA', 41), (234, 'ALEGO USONGA', 41), (235, 'GEM', 41), (236, 'BONDO', 41), (237, 'RARIEDA', 41),
+	(238, 'KISUMU EAST', 42), (239, 'KISUMU WEST', 42), (240, 'KISUMU CENTRAL', 42), (241, 'SEME', 42), (242, 'NYANDO', 42), (243, 'MUHORONI', 42), (244, 'NYAKACH', 42),
+	(245, 'KASIPUL', 43), (246, 'KABONDO KASIPUL', 43), (247, 'KARACHUONYO', 43), (248, 'RANGWE', 43), (249, 'HOMABAY TOWN', 43), (250, 'NDHIWA', 43), (251, 'MBITA', 43), (252, 'SUBA', 43),
+	(253, 'RONGO', 44), (254, 'AWENDO', 44), (255, 'SUNA EAST', 44), (256, 'SUNA WEST', 44), (257, 'URIRI', 44), (258, 'NYATIKE', 44), (259, 'KURIA WEST', 44), (260, 'KURIA EAST', 44),
+	(261, 'BONCHARI', 45), (262, 'SOUTH MUGIRANGO', 45), (263, 'BOMACHOGE BORABU', 45), (264, 'BOBASI', 45), (265, 'BOMACHOGE CHACHE', 45), (266, 'NYARIBARI MASABA', 45), (267, 'NYARIBARI CHACHE', 45), (268, 'KITUTU CHACHE NORTH', 45), (269, 'KITUTU CHACHE SOUTH', 45),
+	(270, 'KITUTU MASABA', 46), (271, 'WEST MUGIRANGO', 46), (272, 'NORTH MUGIRANGO', 46), (273, 'BORABU', 46),
+	(274, 'WESTLANDS', 47), (275, 'DAGORETI NORTH', 47), (276, 'DAGORETI SOUTH', 47), (277, 'LANG\'ATA', 47), (278, 'KIBRA', 47), (279, 'ROYSAMBU', 47), (280, 'KASARANI', 47), (281, 'RUARAKA', 47), (282, 'EMBAKASI SOUTH', 47), (283, 'EMBAKASI NORTH', 47), (284, 'EMBAKASI CENTRAL', 47), (285, 'EMBAKASI EAST', 47), (286, 'EMBAKASI WEST', 47), (287, 'MAKADARA', 47), (288, 'KAMUKUNJI', 47), (289, 'STAREHE', 47), (290, 'MATHARE', 47);
+--
+INSERT IGNORE INTO locations() VALUES
+	(1, "Lanet", 32, 176);
 DESC property_type;
-INSERT IGNORE INTO property_type VALUES
-	(1, "LAND"),
-	(2, "HOUSE");
+INSERT IGNORE INTO property_type(prop_name) VALUES
+	("LAND"),
+	("HOUSE");
 DESC property_size;
-INSERT IGNORE INTO property_size VALUES
-	(1, "SINGLE-FAMILY HOME"),
-	(2, "APARTMENT"),
-	(3, "BUNGALOW"),
-	(4, "RANCH"),
-	(5, "MANSION"),
-	(6, "1/8 ACRE"),
-	(7, "1/4 ACRE"),
-	(8, "1/2 ACRE"),
-	(9, "1 ACRE"),
-	(10, "2 ACRES"),
-	(11, "2.5 ACRES"),
-	(12, "5 ACRES");
-DESC property;
-INSERT IGNORE INTO property VALUES
-	(1, 2, 2, 22, 48, NULL, 5000000);
+INSERT IGNORE INTO property_size(prop_name) VALUES
+	("SINGLE-FAMILY HOME"),
+	("APARTMENT"),
+	("BUNGALOW"),
+	("RANCH"),
+	("MANSION"),
+	("1/8 ACRE"),
+	("1/4 ACRE"),
+	("1/2 ACRE"),
+	("1 ACRE"),
+	("2 ACRES"),
+	("2.5 ACRES"),
+	("5 ACRES");
 -- 
 DESC user_details;
-INSERT IGNORE INTO user_details VALUES
-	(1, "Admin", "Admin",27624532, 123456789, "admin@domain.ac.ke", NULL, DEFAULT, DEFAULT, 30, 65, "Sokomoko", 1);
+INSERT IGNORE INTO user_details(first_name, last_name, id_passport_number, phone_number, user_email, residence_county, residence_town, user_location) VALUES
+	("Admin", "Root", 12345678, "+254704476243", "admin@realest.ac.ke", 47, 274, "Sokomoko");
+DESC property;
+INSERT IGNORE INTO property(user_id_number, prop_type_id, prop_size_id, location_id, price) VALUES
+	(12345678, 2, 1, 1, 5000000);
 DESC account_type;
-INSERT IGNORE INTO account_type VALUES
-	(1, "BUSINESS"),
-	(2, "CLIENT");
+INSERT IGNORE INTO account_type(account_type) VALUES
+	("BUSINESS"),
+	("CLIENT");
 desc access_level;
-INSERT IGNORE INTO access_level VALUES
-	(1, "DATABASE ADMIN", 1),
-	(2, "MANAGER", 1),
-	(3, "SUPERVISOR", 1),
-	(4, "EMPLOYEE", 1),
-	(5, "CLIENT", 2);
-DESC logins;
-INSERT IGNORE INTO logins VALUES(1, "admin", "root", 1, 1);
+INSERT IGNORE INTO access_level(access_name, ac_type_id) VALUES
+	("DATABASE ADMIN", 1),
+	("MANAGER", 1),
+	("SUPERVISOR", 1),
+	("EMPLOYEE", 1),
+	("CLIENT", 2);
+-- default logins
+INSERT IGNORE INTO logins VALUES
+	(12345678, "admin", "root", 1, 1);
+-- mode of payments
+INSERT IGNORE INTO payment_modes(mode_name) VALUES
+	("Bank"),
+	("M-Pesa"),
+	("Cash"),
+	("Cheque");
+-- default property, say the business preises
+INSERT IGNORE INTO ownership(user_id_number, property_id, payment_method, transaction_code) VALUES
+	(12345678, 1, 1, "OA2HYDMKO");
+
 
 
 
