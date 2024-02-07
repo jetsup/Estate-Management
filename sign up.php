@@ -97,11 +97,12 @@ if ($result = $connection->query($query)) {
             <p style="Color: red;">The content in this panel might be confidential and therefore fill carefully</p>
             <label for="username">Username: </label>
             <input id="username" type="text" name="username" placeholder="Enter your Username or Email" autocomplete="username" style="width: 100mm;">
+            <button onclick="check()">Check Username</button>
             <br><br>
             <label for="password">Password: </label>
-            <input id="password" type="password" name="password" placeholder="Password" autocomplete="current-password" style="width: 100mm;">
+            <input id="password" type="password" name="password" placeholder="Password" autocomplete="current-password" style="width: 100mm;" disabled>
             <br><br>
-            <input id="confirm" type="submit" value="Submit" name="button">
+            <input id="checkUsername" type="submit" value="Submit" name="button">
             <input id="reset" type="reset">
         </fieldset>
 
@@ -146,10 +147,21 @@ if ($result = $connection->query($query)) {
         // console.log(index);
     }
     // working on this
-    var ele = document.getElementById("username");
-    ele.addEventListener('input', check);
+    // var ele = document.getElementById("username");
+    // ele.addEventListener('input', check);
 
     function check() {
+        var el = document.getElementById("username");
+        var exist = <?php
+                    include "est_connection.php";
+                    $query = "SELECT * FROM logins WHERE username = 'get the value from a cookie'";
+                    $res = $connection->query($query);
+                    $i = $res->num_rows;
+                    if ($i) echo "true";
+                    else echo "false";
+                    ?>;
+        console.log("PHP Returned: "+exist);
+        /*
         console.log("Changed");
         var c = document.getElementById("username").value;
         document.cookie = "username=" + c;
@@ -171,7 +183,7 @@ if ($result = $connection->query($query)) {
                         $s = "";
                         foreach ($_POST as $k => $v) {
                             # code...
-                            $s = $s.$k;
+                            $s = $s . $k;
                         }
                         echo $s; ?>];
 
@@ -179,6 +191,7 @@ if ($result = $connection->query($query)) {
         //     console.log(element);
         // });
         console.log("PHP: " + taken.length);
+        */
     }
 </script>
 

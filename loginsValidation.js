@@ -88,6 +88,31 @@ function validateSignup() {
             }
         }
     }
+    // check username and password
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    if (username.value.trim() == "") {
+        username.focus();
+        return false;
+    }else{
+        var userPattern = /^[a-z0-9_]{4}$/;
+        if(!userPattern.test(username)){
+            username.value = "";
+            username.focus();
+            return false;
+        }
+    }
+    if (password.value.trim() == "") {
+        password.focus();
+        return false;
+    }else{
+        var passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$/;
+        if(!passPattern.test(password)){
+            password.value = "";
+            password.focus();
+            return false;
+        }
+    }
     // check if the robot checkbox is checked
     if (!document.signupForm.robot.checked) {
         alert("Confirm that you are not a robot");
@@ -112,24 +137,24 @@ function validateLogins() {
         } else {
             /**
              * **************Properties**************
-             * i            - ignorecase
+             * i            - ignore-case
              * g            - 
              * 
              * 
-             * [^a]         - find any charachter that is not 'a'
+             * [^a]         - find any character that is not 'a'
              * [a|b]        - find either 'a' OR 'b'
-             * [a-z]        - find any characher for lowercase
+             * [a-z]        - find any character for lowercase
              * [0-9]        - find any digit in the string
              * 
              * **************Metacharacters**************
-             * .            - find a single chatacter except new line or line terminator
-             * \w           - find a word cacter
+             * .            - find a single character except new line or line terminator
+             * \w           - find a word character
              * \W           - find non-word character
              * \d           - find a digit
              * \D           - find a non-digit
              * \s           - find a whitespace
              * \S           - find a non-whitespace
-             * \b           - find a matchh at begining or end of a word (\bHello)-> find Hello at the begining (Hello\b)-> find Hello at the end
+             * \b           - find a match at beginning or end of a word (\bHello)-> find Hello at the beginning (Hello\b)-> find Hello at the end
              * \B           - find a match but should not be at the beginning or at the end (specifies as above)
              * \0           - find a NULL character
              * \n           - find a newline character
@@ -142,14 +167,14 @@ function validateLogins() {
              * \udddd       - find the UNICODE character specified by the hexadecimal number dddd
              * 
              * **************Quantifiers**************
-             * n+           - match any string that matches atleast ONE 'n'
-             * n*           - match hany string that contains ZERO or MORE occurence of 'n'
-             * n?           - match any string that contains ZERO or ONE occurence of 'n'
+             * n+           - match any string that matches at least ONE 'n'
+             * n*           - match any string that contains ZERO or MORE occurrence of 'n'
+             * n?           - match any string that contains ZERO or ONE occurrence of 'n'
              * n{X}.        - match any string that contains a sequence of X  n's
              * n{X,Y}.      - match any string that contains a sequence of X-Y n's
-             * n{X,}.       - match any string that contains a sequence of atleast X n's
+             * n{X,}.       - match any string that contains a sequence of at least X n's
              * n$.          - match any string with n at the end of it
-             * ^n           - match any string with n at the begining
+             * ^n           - match any string with n at the beginning
              * ?=n          - match any string that is followed by a specific string n
              * ?!n          - match any string that is not followed by a specific string n
              * 
@@ -157,10 +182,10 @@ function validateLogins() {
              * compile()-   - {Deprecated}compile a Regular Expression
              * exec()       - test for a match in a string and return the first match
              * test()       - test for a match in a string, returns true or false
-             * toString()   - returns the string value of the regulat expression
+             * toString()   - returns the string value of the regular expression
              */
 
-            var allowedUsername = /[a-z0-9_]+/i; // the username can contain any of the specified characters
+            var allowedUsername = /[a-z0-9_]{4}/i; // the username can contain any of the specified characters
             var allowedPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$/;
 
             if (allowedUsername.test(username)) {

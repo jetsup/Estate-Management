@@ -122,7 +122,7 @@ INSERT IGNORE INTO property_size(prop_name) VALUES
 -- 
 DESC user_details;
 INSERT IGNORE INTO user_details(first_name, last_name, id_passport_number, phone_number, user_email, residence_county, residence_town, user_location) VALUES
-	("Admin", "Root", 12345678, "+254704476243", "admin@realest.ac.ke", 47, 274, "Sokomoko");
+	("Admin", "Root@123", 12345678, "+254704476243", "admin@realest.ac.ke", 47, 274, "Sokomoko");
 DESC property;
 INSERT IGNORE INTO property(user_id_number, prop_type_id, prop_size_id, location_id, price) VALUES
 	(12345678, 2, 1, 1, 5000000);
